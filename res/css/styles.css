@@ -295,7 +295,15 @@ footer ul li i{
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
     display:flex;
     overflow:hidden;
+    filter: opacity(0%);
+    animation: platFadeIn 0.3s;
+    animation-fill-mode: forwards;
 }
+
+.plat:nth-child(1){ animation-delay: 0.0s; }
+.plat:nth-child(2){ animation-delay: 0.3s; }
+.plat:nth-child(3){ animation-delay: 0.6s; }
+.plat:nth-child(4){ animation-delay: 0.9s; }
 
 .plat-text {
     display: grid;
@@ -428,6 +436,7 @@ hr{
     margin-bottom:30px;
 }
 
+
 /* COEUR + ANIMATIONS */
 
 .coeur{
@@ -502,6 +511,15 @@ hr{
         opacity: 0;
         visibility: hidden;
         filter: opacity(0%);
+  }
+}
+
+@keyframes platFadeIn {
+    0% {
+        filter: opacity(0%);
+    }
+    100% {
+        filter: opacity(100%);
     }
 } 
 
